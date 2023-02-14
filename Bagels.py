@@ -1,5 +1,4 @@
 # Bagels Game
-import sys
 from random import randint
 t ='''        *** GAME OF BAGELS ********************************************************
         *                                                                         *
@@ -18,7 +17,7 @@ print(t)
 play = 'yes'
 j = 0
 n = str(randint(100,999))
-#print(n)
+print(n)
 a = list(map(int, n))
 #print(a)
 def Bagels(x):
@@ -36,7 +35,7 @@ def Bagels(x):
     if result == '':
         result = 'Bagels'
     print(result)
-    return Bagels
+    
 while play == 'yes':
     while j != 10:
         j = j + 1
@@ -61,7 +60,7 @@ while play == 'yes':
     play = str(input('Do you want to play again? (yes or no)'))
     if play == 'no':
         print('Thanks for playing!')
-        sys.exit()
+        break
     else:
         j = 0
         n = str(randint(100,999))
